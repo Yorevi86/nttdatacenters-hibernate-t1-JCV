@@ -1,0 +1,18 @@
+00:37:19.357 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:37:19.568 [main] ERROR com.nttdata.HibernateUtil      - [<clinit>            ] - Error de inicialización en la configuración de la sesión.
+00:40:36.994 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:40:37.212 [main] ERROR com.nttdata.HibernateUtil      - [<clinit>            ] - Error de inicialización en la configuración de la sesión.
+00:44:14.845 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:44:15.164 [main] ERROR com.nttdata.HibernateUtil      - [<clinit>            ] - Error de inicialización en la configuración de la sesión.
+01:14:40.680 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+01:14:40.993 [main] ERROR com.nttdata.HibernateUtil      - [<clinit>            ] - Error de inicialización en la configuración de la sesión.
+01:15:05.732 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+01:15:06.043 [main] ERROR com.nttdata.HibernateUtil      - [<clinit>            ] - Error de inicialización en la configuración de la sesión.
+01:15:20.710 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+01:15:21.010 [main] ERROR com.nttdata.HibernateUtil      - [<clinit>            ] - Error de inicialización en la configuración de la sesión.
+01:24:57.530 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+01:24:57.836 [main] ERROR com.nttdata.HibernateUtil      - [<clinit>            ] - Error de inicialización en la configuración de la sesión.
+01:34:39.128 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+01:34:39.434 [main] ERROR com.nttdata.HibernateUtil      - [<clinit>            ] - Error de inicialización en la configuración de la sesión.
+01:44:21.872 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+01:44:22.177 [main] ERROR com.nttdata.HibernateUtil      - [<clinit>            ] - Error de inicialización en la configuración de la sesión.

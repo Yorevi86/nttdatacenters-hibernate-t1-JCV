@@ -1,0 +1,5 @@
+00:26:45.368 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:28:55.672 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:29:38.520 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:30:02.656 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:30:56.753 [main] WARN  o.h.o.connections.pooling      - [configure           ] - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
