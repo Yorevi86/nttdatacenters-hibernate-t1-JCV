@@ -7,6 +7,8 @@ import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.nttdata.persistence.dao.interfaces.CommonDaoI;
 import com.nttdata.persistence.entities.AbstractEntity;
@@ -19,6 +21,9 @@ import com.nttdata.persistence.entities.AbstractEntity;
  */
 public abstract class CommonDaoImpl<T extends AbstractEntity> implements CommonDaoI<T> {
 
+	/** LOG */
+	private static final Logger LOG = LoggerFactory.getLogger(CommonDaoImpl.class);
+	
 	/** Tipo de clase */
 	private Class<T> entityClass;
 
@@ -40,6 +45,8 @@ public abstract class CommonDaoImpl<T extends AbstractEntity> implements CommonD
 	@Override
 	public void insertar(final T newEntity) {
 
+		LOG.info("Used the general method insertar.");
+		
 		// Verificación de sesión abierta.
 		if (!sesion.getTransaction().isActive()) {
 			sesion.getTransaction().begin();
@@ -56,6 +63,8 @@ public abstract class CommonDaoImpl<T extends AbstractEntity> implements CommonD
 	@Override
 	public void actualizar(final T newEntity) {
 
+		LOG.info("Used the general method actualizar.");
+		
 		// Verificación de sesión abierta.
 		if (!sesion.getTransaction().isActive()) {
 			sesion.getTransaction().begin();
@@ -70,6 +79,8 @@ public abstract class CommonDaoImpl<T extends AbstractEntity> implements CommonD
 
 	@Override
 	public void borrar(final T newEntity) {
+		
+		LOG.info("Used the general method borrar.");
 
 		// Verificación de sesión abierta.
 		if (!sesion.getTransaction().isActive()) {
@@ -86,6 +97,8 @@ public abstract class CommonDaoImpl<T extends AbstractEntity> implements CommonD
 	@Override
 	public T buscarPorId(final Long id) {
 
+		LOG.info("Used the general method buscarPorId.");
+		
 		// Verificación de sesión abierta.
 		if (!sesion.getTransaction().isActive()) {
 			sesion.getTransaction().begin();
@@ -100,6 +113,8 @@ public abstract class CommonDaoImpl<T extends AbstractEntity> implements CommonD
 	@Override
 	public List<T> buscarTodos() {
 
+		LOG.info("Used the general method buscarTodos.");
+		
 		// Verificación de sesión abierta.
 		if (!sesion.getTransaction().isActive()) {
 			sesion.getTransaction().begin();

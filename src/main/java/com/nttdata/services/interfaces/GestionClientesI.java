@@ -6,7 +6,6 @@ package com.nttdata.services.interfaces;
 import java.util.List;
 
 import com.nttdata.persistence.entities.Cliente;
-import com.nttdata.persistence.entities.RankingGastos;
 
 /**
  * Interfaz para la gestión de clientes.
@@ -62,9 +61,7 @@ public interface GestionClientesI {
 	public List<Cliente> buscarPorNombreYApellidos(final String nombre, final String primerApellido, final String segundoApellido);
 
 	/**
-	 * Método para hacer una lista de los clientes que más gastan.
-	 * 
-	 * @return List<Cliente>
+	 * Método para hacer una lista de los clientes que más gastan y printarla en consola.
 	 */
-	public List<RankingGastos> obtenerLosClientesQueMasGastan();
+	public void obtenerLosClientesQueMasGastan();
 }

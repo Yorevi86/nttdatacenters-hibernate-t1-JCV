@@ -24,7 +24,7 @@ public class Utilidades {
 	/**Contructor */
 	private Utilidades() {
 		
-		LOG.warn("Intento de creación de un objeto clase Utilidades.");
+		LOG.warn("Creation of an Utilidades class try.");
 		
 		throw new IllegalStateException("Clase para utilidades únicamente.");
 	}
@@ -37,7 +37,7 @@ public class Utilidades {
 	 */
 	public static String stringBuilder (String... texto) {
 		
-		LOG.debug("Método stringBuilder usado.");
+		LOG.debug("stringBuilder method used.");
 		
 		StringBuilder sb = new StringBuilder();
 		
@@ -56,7 +56,7 @@ public class Utilidades {
 	 */
 	public static Date formatDateForSql (String fecha) {
 		
-		LOG.debug("Método formatDateForSql usado.");
+		LOG.debug("formatDateForSql method used.");
 		
 		/** Cambiamos del formato español al formato de Date. */
 		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");

@@ -6,6 +6,8 @@ package com.nttdata.services.impl;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.nttdata.persistence.dao.impl.ContratoDaoImpl;
 import com.nttdata.persistence.dao.interfaces.ContratoDaoI;
@@ -20,6 +22,9 @@ import com.nttdata.services.interfaces.GestionContratosI;
  */
 public class GestionContratosImpl implements GestionContratosI{
 	
+	/** LOG */
+	private static final Logger LOG = LoggerFactory.getLogger(GestionContratosImpl.class);
+	
 	/** DAO de la tabla T_CONTRATOS */
 	private ContratoDaoI contratoDao;
 	
@@ -33,6 +38,8 @@ public class GestionContratosImpl implements GestionContratosI{
 	@Override
 	public void insertarNuevoContrato(final Contrato nuevoContrato) {
 
+		LOG.info("Used the method insertarNuevoContrato.");
+		
 		// Verificación de nulidad e inexistencia.
 		if (nuevoContrato != null && nuevoContrato.getContratoId() == null) {
 
@@ -45,6 +52,8 @@ public class GestionContratosImpl implements GestionContratosI{
 	@Override
 	public List<Contrato> obtenerTodosContratos() {
 		
+		LOG.info("Used the method obtenerTodosContratos.");
+		
 		// Resultado.
 		List<Contrato> listadoContratos;
 
@@ -56,6 +65,8 @@ public class GestionContratosImpl implements GestionContratosI{
 
 	@Override
 	public Contrato buscarPorId(Long contratoId) {
+		
+		LOG.info("Used the method buscarPorId with contractID: {}", contratoId);
 		
 		// Resultado.
 		Contrato contrato = null;
@@ -72,10 +83,12 @@ public class GestionContratosImpl implements GestionContratosI{
 
 	@Override
 	public void eliminarContrato(Contrato contratoABorrar) {
-
+		
 		// Verificación de nulidad y existencia.
-		if (contratoABorrar != null && contratoABorrar.getContratoId() != null) {
+		if (contratoABorrar.getContratoId() != null) {
 
+			LOG.warn("Used the method eliminarContrato to delete the contractId: {}", contratoABorrar.getContratoId());
+			
 			// Eliminación del contrato.
 			contratoDao.borrar(contratoABorrar);
 		}
@@ -86,7 +99,9 @@ public class GestionContratosImpl implements GestionContratosI{
 	public void actualizarContrato(Contrato contratoAActualizar) {
 		
 		// Verificación de nulidad y existencia.
-		if (contratoAActualizar != null && contratoAActualizar.getContratoId() != null) {
+		if (contratoAActualizar.getContratoId() != null) {
+			
+			LOG.warn("Used the method actualizarContrato to update the contract: {}", contratoAActualizar.getContratoId());
 
 			// Actualización de datos del contrato.
 			contratoDao.actualizar(contratoAActualizar);
@@ -96,6 +111,8 @@ public class GestionContratosImpl implements GestionContratosI{
 
 	@Override
 	public List<Contrato> obtenerContratosDeUnCliente(Long clienteId) {
+		
+		LOG.info("Used the method obtenerContratosDeUnCliente for the clientId: {}", clienteId);
 		
 		// Obtención de la lista de contratos que cumplen los criterios de búsqueda.
 		return contratoDao.buscarContratosPorClienteId(clienteId);

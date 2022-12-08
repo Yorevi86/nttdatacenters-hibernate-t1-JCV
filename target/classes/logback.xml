@@ -17,6 +17,13 @@
 		<!-- POLÍTICA CON LA QUE PARTICIONA EL FICHERO -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
 			<fileNamePattern>src/main/resources/logJCV-${todayDate}.%i.logJCV.zip</fileNamePattern>
+			
+			<!-- TAMAÑO MÁXIMO DEL CONJUNTO DE LOGS FICHEROS -->
+			<totalSizeCap>5Mb</totalSizeCap>
+			
+			<!-- CANTIDAD DE FICHEROS -->
+			<minIndex>1</minIndex>
+			<maxIndex>4</maxIndex>
 		</rollingPolicy>
 		
 		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
@@ -39,6 +46,13 @@
 		<!-- POLÍTICA CON LA QUE PARTICIONA EL FICHERO -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
 			<fileNamePattern>src/main/resources/logJCV-WARN-${todayDate}.%i.logJCV.zip</fileNamePattern>
+			
+			<!-- TAMAÑO MÁXIMO DEL CONJUNTO DE LOGS FICHEROS -->
+			<totalSizeCap>4Mb</totalSizeCap>
+			
+			<!-- CANTIDAD DE FICHEROS -->
+			<minIndex>1</minIndex>
+			<maxIndex>4</maxIndex>
 		</rollingPolicy>
 		
 		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">

@@ -8,7 +8,6 @@ import org.hibernate.Session;
 
 import com.nttdata.persistence.entities.Cliente;
 import com.nttdata.persistence.entities.Contrato;
-import com.nttdata.persistence.entities.RankingGastos;
 import com.nttdata.services.impl.GestionClientesImpl;
 import com.nttdata.services.impl.GestionContratosImpl;
 import com.nttdata.services.interfaces.GestionClientesI;
@@ -225,11 +224,7 @@ public class MainController {
 					, "|", contrato.getPrecio().toString()));
 		}
 		
-		/** Obtener los clientes que más gastan */
-		List<RankingGastos> clientesDeudores = gestionClientes.obtenerLosClientesQueMasGastan();
-		
-		for (RankingGastos ranking: clientesDeudores) {
-			System.out.println(Utilidades.stringBuilder(ranking.getClienteId().toString(), "|", ranking.getDocumentoIdentidad(), "|", ranking.getSumPrecio().toString()));
-		}
+		/** Obtener los clientes que más gastan con formato de impresión propio */
+		gestionClientes.obtenerLosClientesQueMasGastan();
 	}
 }

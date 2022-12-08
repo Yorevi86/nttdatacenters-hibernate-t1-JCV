@@ -6,11 +6,12 @@ package com.nttdata.services.impl;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.nttdata.persistence.dao.impl.ClienteDaoImpl;
 import com.nttdata.persistence.dao.interfaces.ClienteDaoI;
 import com.nttdata.persistence.entities.Cliente;
-import com.nttdata.persistence.entities.RankingGastos;
 import com.nttdata.services.interfaces.GestionClientesI;
 
 /**
@@ -21,6 +22,9 @@ import com.nttdata.services.interfaces.GestionClientesI;
  */
 public class GestionClientesImpl implements GestionClientesI {
 
+	/** LOG */
+	private static final Logger LOG = LoggerFactory.getLogger(GestionClientesImpl.class);
+	
 	/** DAO de la tabla T_CLIENTES */
 	private ClienteDaoI clientelaDao;
 	
@@ -34,6 +38,8 @@ public class GestionClientesImpl implements GestionClientesI {
 	@Override
 	public void insertarNuevoCliente(final Cliente nuevoCliente) {
 
+		LOG.info("Used the method insertarNuevoCliente.");
+		
 		// Verificación de nulidad e inexistencia.
 		if (nuevoCliente != null && nuevoCliente.getClienteId() == null) {
 
@@ -46,6 +52,8 @@ public class GestionClientesImpl implements GestionClientesI {
 	@Override
 	public List<Cliente> obtenerTodosClientes() {
 		
+		LOG.info("Used the method obtenerTodosClientes.");
+		
 		// Resultado.
 		List<Cliente> listadoClientes;
 
@@ -57,6 +65,8 @@ public class GestionClientesImpl implements GestionClientesI {
 
 	@Override
 	public Cliente buscarPorId(Long clienteId) {
+		
+		LOG.info("Used the method buscarPorId for the clientID: {}", clienteId);
 		
 		// Resultado.
 		Cliente cliente = null;
@@ -73,9 +83,11 @@ public class GestionClientesImpl implements GestionClientesI {
 
 	@Override
 	public void eliminarCliente(Cliente clienteABorrar) {
-
+		
 		// Verificación de nulidad y existencia.
 		if (clienteABorrar != null && clienteABorrar.getClienteId() != null) {
+			
+			LOG.warn("Used the method eliminarCliente for the clientID: {}", clienteABorrar.getClienteId());
 
 			// Eliminación del cliente.
 			clientelaDao.borrar(clienteABorrar);
@@ -88,6 +100,8 @@ public class GestionClientesImpl implements GestionClientesI {
 		
 		// Verificación de nulidad y existencia.
 		if (clienteAActualizar != null && clienteAActualizar.getClienteId() != null) {
+			
+			LOG.warn("Used the method actualizarCliente for the clientID: {}", clienteAActualizar.getClienteId());
 
 			// Actualización de datos del cliente.
 			clientelaDao.actualizar(clienteAActualizar);;
@@ -98,15 +112,19 @@ public class GestionClientesImpl implements GestionClientesI {
 	@Override
 	public List<Cliente> buscarPorNombreYApellidos(String nombre, String primerApellido, String segundoApellido) {
 
+		LOG.info("Used the method buscarPorNombreYApellidos for name, middlename, lastname: {}, {}, {}", nombre, primerApellido, segundoApellido);
+		
 		// Obtención de la lista de clientes que cumplen los criterios de búsqueda.
 		return clientelaDao.buscarPorNombreYApellidos(nombre, primerApellido, segundoApellido);
 	}
 	
 	@Override
-	public List<RankingGastos> obtenerLosClientesQueMasGastan() {
+	public void obtenerLosClientesQueMasGastan() {
 
+		LOG.info("Used the method obtenerLosClientesQueMasGastan.");
+		
 		// Obtención de la lista de clientes que más gastan al mes.
-		return clientelaDao.obtenerLosClientesQueMasGastan();
+		clientelaDao.obtenerLosClientesQueMasGastan();
 	}
 
 }

@@ -17,9 +17,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * @author Jonatan Carrera Viera
  *
@@ -28,9 +25,6 @@ import org.slf4j.LoggerFactory;
 @Table(name = "T_CONTRATO")
 public class Contrato extends AbstractEntity implements Serializable{
 
-	/** LOG */
-	private static final Logger LOG = LoggerFactory.getLogger(Contrato.class);
-	
 	/** Serial */
 	private static final long serialVersionUID = 1L;
 	

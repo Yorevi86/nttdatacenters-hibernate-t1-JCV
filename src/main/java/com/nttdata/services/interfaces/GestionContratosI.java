@@ -5,7 +5,6 @@ package com.nttdata.services.interfaces;
 
 import java.util.List;
 
-import com.nttdata.persistence.entities.Cliente;
 import com.nttdata.persistence.entities.Contrato;
 
 /**
