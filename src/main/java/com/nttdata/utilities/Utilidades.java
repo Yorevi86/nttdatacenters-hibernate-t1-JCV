@@ -58,7 +58,7 @@ public class Utilidades {
 		
 		LOG.debug("formatDateForSql method used.");
 		
-		/** Cambiamos del formato español al formato de Date. */
+		/** Cambiamos del formato español al formato de Date en SQL. */
 		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	    DateTimeFormatter formato2 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		

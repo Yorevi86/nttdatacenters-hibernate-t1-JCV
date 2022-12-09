@@ -19,6 +19,8 @@ import javax.persistence.Transient;
 
 
 /**
+ * Clase que genera la tabla T_Cliente.
+ * 
  * @author Jonatan Carrera Viera
  *
  */

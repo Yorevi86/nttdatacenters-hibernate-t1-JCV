@@ -104,7 +104,7 @@ public class GestionClientesImpl implements GestionClientesI {
 			LOG.warn("Used the method actualizarCliente for the clientID: {}", clienteAActualizar.getClienteId());
 
 			// Actualización de datos del cliente.
-			clientelaDao.actualizar(clienteAActualizar);;
+			clientelaDao.actualizar(clienteAActualizar);
 		}
 		
 	}

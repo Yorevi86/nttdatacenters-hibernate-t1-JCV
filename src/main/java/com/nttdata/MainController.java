@@ -87,7 +87,7 @@ public class MainController {
 		final Contrato ct1 = new Contrato();
 		ct1.setFechaVigencia(Utilidades.formatDateForSql("01/11/2022"));
 		ct1.setFechaCaducidad(Utilidades.formatDateForSql("01/11/2027"));
-		ct1.setPrecio(29.99f);
+		ct1.setPrecio(29.99);
 		ct1.setCliente(cl3);
 		ct1.setCreateUser(createUser);
 		ct1.setCreateDate(createDate);
@@ -95,7 +95,7 @@ public class MainController {
 		final Contrato ct2 = new Contrato();
 		ct2.setFechaVigencia(Utilidades.formatDateForSql("01/12/2022"));
 		ct2.setFechaCaducidad(Utilidades.formatDateForSql("01/12/2032"));
-		ct2.setPrecio(24.99f);
+		ct2.setPrecio(24.99);
 		ct2.setCliente(cl5);
 		ct2.setCreateUser(createUser);
 		ct2.setCreateDate(createDate);
@@ -103,7 +103,7 @@ public class MainController {
 		final Contrato ct3 = new Contrato();
 		ct3.setFechaVigencia(Utilidades.formatDateForSql("10/10/2022"));
 		ct3.setFechaCaducidad(Utilidades.formatDateForSql("10/10/2027"));
-		ct3.setPrecio(29.99f);
+		ct3.setPrecio(29.99);
 		ct3.setCliente(cl4);
 		ct3.setCreateUser(createUser);
 		ct3.setCreateDate(createDate);
@@ -111,7 +111,7 @@ public class MainController {
 		final Contrato ct4 = new Contrato();
 		ct4.setFechaVigencia(Utilidades.formatDateForSql("20/09/2022"));
 		ct4.setFechaCaducidad(Utilidades.formatDateForSql("20/09/2027"));
-		ct4.setPrecio(29.99f);
+		ct4.setPrecio(29.99);
 		ct4.setCliente(cl1);
 		ct4.setCreateUser(createUser);
 		ct4.setCreateDate(createDate);
@@ -119,7 +119,7 @@ public class MainController {
 		final Contrato ct5 = new Contrato();
 		ct5.setFechaVigencia(Utilidades.formatDateForSql("25/08/2022"));
 		ct5.setFechaCaducidad(Utilidades.formatDateForSql("25/08/2032"));
-		ct5.setPrecio(24.99f);
+		ct5.setPrecio(24.99);
 		ct5.setCliente(cl1);
 		ct5.setCreateUser(createUser);
 		ct5.setCreateDate(createDate);
@@ -127,7 +127,7 @@ public class MainController {
 		final Contrato ct6 = new Contrato();
 		ct6.setFechaVigencia(Utilidades.formatDateForSql("31/01/2022"));
 		ct6.setFechaCaducidad(Utilidades.formatDateForSql("31/01/2032"));
-		ct6.setPrecio(24.99f);
+		ct6.setPrecio(24.99);
 		ct6.setCliente(cl4);
 		ct6.setCreateUser(createUser);
 		ct6.setCreateDate(createDate);
@@ -135,7 +135,7 @@ public class MainController {
 		final Contrato ct7 = new Contrato();
 		ct7.setFechaVigencia(Utilidades.formatDateForSql("22/02/2022"));
 		ct7.setFechaCaducidad(Utilidades.formatDateForSql("22/02/2032"));
-		ct7.setPrecio(24.99f);
+		ct7.setPrecio(24.99);
 		ct7.setCliente(cl1);
 		ct7.setCreateUser(createUser);
 		ct7.setCreateDate(createDate);
@@ -143,7 +143,7 @@ public class MainController {
 		final Contrato ct8 = new Contrato();
 		ct8.setFechaVigencia(Utilidades.formatDateForSql("14/05/2022"));
 		ct8.setFechaCaducidad(Utilidades.formatDateForSql("14/05/2027"));
-		ct8.setPrecio(29.99f);
+		ct8.setPrecio(29.99);
 		ct8.setCliente(cl3);
 		ct8.setCreateUser(createUser);
 		ct8.setCreateDate(createDate);
@@ -151,7 +151,7 @@ public class MainController {
 		final Contrato ct9 = new Contrato();
 		ct9.setFechaVigencia(Utilidades.formatDateForSql("26/11/2022"));
 		ct9.setFechaCaducidad(Utilidades.formatDateForSql("26/11/2027"));
-		ct9.setPrecio(29.99f);
+		ct9.setPrecio(29.99);
 		ct9.setCliente(cl4);
 		ct9.setCreateUser(createUser);
 		ct9.setCreateDate(createDate);

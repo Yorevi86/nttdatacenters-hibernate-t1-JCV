@@ -36,7 +36,7 @@ public abstract class CommonDaoImpl<T extends AbstractEntity> implements CommonD
 	 * @param session
 	 */
 	@SuppressWarnings("unchecked")
-	public CommonDaoImpl(Session session) {
+	protected CommonDaoImpl(Session session) {
 		setEntityClass(
 				(Class<T>) ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[0]);
 		this.sesion = session;

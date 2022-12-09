@@ -18,6 +18,8 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 /**
+ * Clase que genera la tabla T_Contrato.
+ * 
  * @author Jonatan Carrera Viera
  *
  */
@@ -38,7 +40,7 @@ public class Contrato extends AbstractEntity implements Serializable{
 	private Date fechaCaducidad;
 	
 	/** Precio mensual */
-	private Float precio;
+	private Double precio;
 	
 	/** Cliente asociado FK */
 	private Cliente cliente;
@@ -94,14 +96,14 @@ public class Contrato extends AbstractEntity implements Serializable{
 	 * @return the precio
 	 */
 	@Column(name = "C_PRECIO", precision = 2, nullable = false)
-	public Float getPrecio() {
+	public Double getPrecio() {
 		return precio;
 	}
 
 	/**
 	 * @param precio the precio to set
 	 */
-	public void setPrecio(Float precio) {
+	public void setPrecio(Double precio) {
 		this.precio = precio;
 	}
 

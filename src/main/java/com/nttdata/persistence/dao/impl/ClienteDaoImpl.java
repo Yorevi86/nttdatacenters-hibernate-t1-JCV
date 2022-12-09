@@ -74,7 +74,7 @@ public class ClienteDaoImpl extends CommonDaoImpl<Cliente> implements ClienteDao
 		cquery.groupBy(pJoinT.get("clienteId"), pJoinT.get("documentoIdentidad"));
 		
 		// Ordenación descendente de gastos mensuales de cada cliente con la suma de todos sus precios.
-		cquery.orderBy(cb.desc(cb.sum(rootP.<Float> get("precio"))));
+		cquery.orderBy(cb.desc(cb.sum(rootP.<Double> get("precio"))));
 
 		// Ejecución de la consulta.
 		List<Object[]> listaResultante = sesion.createQuery(cquery).getResultList();
